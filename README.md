@@ -53,38 +53,32 @@ My current preferred ideas are CodeLearn and CineVerse. If both projects are app
 
 ## Overview
 
-CodeLearn is an interactive full-stack educational platform designed to help beginner developers learn HTML, CSS, and JavaScript through structured lessons, quizzes, flashcards, coding challenges, and gamified learning experiences.
+CodeLearn is an interactive full-stack educational platform designed to help beginner developers learn HTML, CSS, and JavaScript through lessons, quizzes, flashcards, coding challenges, and gamified learning experiences.
 
-The platform aims to provide an engaging and beginner-friendly learning environment where users can build foundational web development skills while tracking their quiz performance over time.
+The platform aims to create an engaging and beginner-friendly environment where users can practice web development concepts while tracking quiz performance and progress.
 
 ---
 
 ## Tech Stack
 
 ### Frontend
-
 - Next.js
 - React
 - CSS
-- Responsive Design Techniques
 
 ### Backend
-
 - Node.js
-- Next.js API Routes / Route Handlers
+- Next.js API Routes
 
 ### Database
-
 - MongoDB
 - Mongoose
 
-### Authentication & Security
-
-- bcrypt for password hashing
+### Authentication
+- bcrypt
 - JWT or session-based authentication
 
 ### Deployment
-
 - Vercel
 - MongoDB Atlas
 
@@ -92,116 +86,58 @@ The platform aims to provide an engaging and beginner-friendly learning environm
 
 ## Focus of the Project
 
-This project will be an evenly focused full-stack application.
-
-The frontend will focus on creating an engaging and responsive learning experience through reusable React components and interactive UI design. The backend will focus on authentication, API development, database management, and persistent quiz score tracking.
-
-The goal is to demonstrate both frontend and backend development skills within a modern full-stack application.
+This project will be an evenly focused full-stack application. The frontend will focus on responsive UI design and interactive learning features, while the backend will focus on authentication, database management, APIs, and persistent quiz score tracking.
 
 ---
 
 ## Project Type
 
-This project will be a browser-based web application accessible on desktop, tablet, and mobile devices.
+Browser-based web application accessible on desktop, tablet, and mobile devices.
 
 ---
 
 ## Project Goal
 
-The goal of CodeLearn is to provide an interactive and beginner-friendly platform for learning web development fundamentals.
-
-Users will be able to:
-
-- Create accounts
-- Log in securely
-- Access structured course content
-- Review flashcards
-- Complete quizzes
-- Save quiz scores
-- View their progress
-- Participate in interactive coding mini-games
-
-The project is intended to combine educational content with interactive learning tools to improve engagement and retention.
+The goal of CodeLearn is to provide an interactive platform for learning web development fundamentals. Users will be able to create accounts, access course content, complete quizzes, review flashcards, save quiz scores, and track their progress.
 
 ---
 
-## User Demographic
+## Users
 
-The primary users of the platform will include:
-
-### Beginner Developers
-
-Users who are learning HTML, CSS, and JavaScript for the first time.
-
-### Self-Taught Learners
-
-Individuals seeking a structured and interactive way to practice frontend development skills.
-
-### Students
-
-Users looking for additional educational resources and coding practice outside of traditional coursework.
+The primary users will include:
+- Beginner developers
+- Self-taught learners
+- Students practicing frontend development
 
 ---
 
 ## Data and API
 
-### Data
-
-The application will use educational content related to HTML, CSS, and JavaScript, including:
-
-- Course information
-- Introductory course text
-- Video information
-- Flashcard references
-- Quiz questions
-- User quiz scores
-
-### User Data
-
-The application will store:
-
-- Username
-- Email
-- Hashed password
-- Quiz scores for each course
-
-### Data Collection
-
-The project will primarily use a custom-built database populated with original course content rather than relying heavily on external APIs. This provides greater flexibility and control over the educational material.
-
-### API
+The application will use custom-built course data related to HTML, CSS, and JavaScript, including videos, flashcards, quiz questions, and user quiz scores.
 
 The backend API will handle:
-
-- User registration
-- User login
+- User authentication
 - Course retrieval
 - Quiz submission
 - Quiz score saving
-- Progress page data retrieval
+- Progress retrieval
 
 ---
-
-## Project Approach
 
 ## Database Schema
 
 ### Users
+Stores registered account information.
 
-The Users collection will store account information for registered users. This is needed for sign up, login, and connecting saved quiz progress to each user.
-
-Fields may include:
-
+Fields:
 - username
 - email
 - hashed password
 
 ### Courses
+Stores the main content for HTML, CSS, and JavaScript courses.
 
-The Courses collection will store the main content for each course, such as HTML, CSS, and JavaScript.
-
-Fields may include:
-
+Fields:
 - courseId
 - title
 - subtitle
@@ -221,102 +157,87 @@ Fields may include:
   - optionD
   - correct
 
-There will likely be three course documents: one for HTML, one for CSS, and one for JavaScript.
+There will likely be three course documents: HTML, CSS, and JavaScript.
 
 ### Progress
+Stores each user’s saved quiz scores.
 
-The Progress collection will store each user’s quiz scores and learning progress.
-
-Fields may include:
-
+Fields:
 - userId
 - quizScores
   - html
   - css
   - javascript
 
-This keeps the progress design simple because each user only needs one progress document, and the progress page can fetch all quiz scores from that single document.
+This keeps the progress system simple because each user only needs one progress document.
 
 ---
 
 ## Potential API Issues
 
-Some possible challenges include:
-
-- Maintaining consistent course data for HTML, CSS, and JavaScript
-- Validating user input during sign up, login, and quiz submission
-- Handling failed requests and database errors gracefully
-- Making sure quiz scores are saved to the correct user account
-- Keeping authentication secure across protected routes
+Potential challenges include:
+- Validating user input
+- Handling failed requests gracefully
+- Secure authentication handling
+- Keeping quiz scores connected to the correct user
 
 ---
 
 ## Sensitive Information
 
-The application will need to securely manage:
-
+Sensitive information will include:
 - User passwords
-- Authentication tokens or sessions
-- Environment variables containing database credentials and secret keys
+- Authentication tokens
+- Environment variables
 
-Passwords will be hashed before storage, and sensitive configuration values will be stored using environment variables.
+Passwords will be hashed before storage.
 
 ---
 
 ## Functionality
 
 The application will include:
-
 - User registration and login
-- Secure authentication
 - Course browsing
-- Course video viewing
+- Video lessons
 - Flashcards
-- Quiz system
+- Quizzes
 - Saved quiz scores
 - Progress page
 - Interactive coding mini-games
-- Responsive design across devices
+- Responsive UI
 
 ---
 
 ## User Flow
 
-1. Users arrive at the homepage
+1. Users visit the homepage
 2. Users create an account or log in
-3. Users browse available courses
-4. Users select HTML, CSS, or JavaScript
-5. Users watch the course video
-6. Users review flashcards
-7. Users complete the quiz
-8. The quiz score is saved to their account
-9. Users view their saved scores on the progress page
-10. Users can return later and continue using the platform
+3. Users select a course
+4. Users watch videos and review flashcards
+5. Users complete quizzes
+6. Quiz scores are saved to their account
+7. Users view progress on the dashboard
 
 ---
 
 ## Features Beyond CRUD
 
 The project goes beyond a standard CRUD application through:
-
-- Gamified learning features
-- Interactive mini-games
-- Flashcard learning sections
+- Gamified learning
+- Interactive coding mini-games
+- Flashcards
 - Dynamic quizzes
-- Saved quiz score tracking
-- Responsive educational UI
-- Authentication and protected routes
+- Persistent quiz score tracking
+- Protected routes and authentication
 
 ---
 
 ## Stretch Goals
 
 Potential stretch goals include:
-
-- Admin dashboard for managing course content
-- Profile customization
 - Achievement badges
-- Progress analytics and charts
-- Bookmarking system
-- Search and filtering functionality
-- Additional courses beyond HTML, CSS, and JavaScript
+- Admin dashboard
+- Progress analytics
+- Search/filter functionality
+- Additional courses
