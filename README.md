@@ -48,7 +48,7 @@ My current preferred ideas are CodeLearn and CineVerse. If both projects are app
 
 
 
-
+---
 # Project Proposal: CodeLearn Full-Stack Web Development Education Platform
 
 ## Overview
