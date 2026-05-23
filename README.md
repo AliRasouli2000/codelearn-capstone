@@ -221,18 +221,6 @@ The application will include:
 
 ---
 
-## Features Beyond CRUD
-
-The project goes beyond a standard CRUD application through:
-- Gamified learning
-- Interactive coding mini-games
-- Flashcards
-- Dynamic quizzes
-- Persistent quiz score tracking
-- Protected routes and authentication
-
----
-
 ## Stretch Goals
 
 Potential stretch goals include:
