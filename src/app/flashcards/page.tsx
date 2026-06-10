@@ -36,7 +36,7 @@ const FlashCardsPage = () => {
     <div className={styles['flashcards-section']}>
       <FlashCardSection flashcards={flashcards}/>
       <footer className={styles['page-footer']}>
-        <p>© 2025 CodeLearn. All rights reserved.</p>
+        <p>© 2026 CodeLearn. All rights reserved.</p>
       </footer>
     </div>
   );

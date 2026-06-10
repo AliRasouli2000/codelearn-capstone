@@ -70,7 +70,7 @@ export default function AboutPage() {
       </section>
 
       <footer className={styles["page-footer"]}>
-        <p>© 2025 CodeLearn. All rights reserved.</p>
+        <p>© 2026 CodeLearn. All rights reserved.</p>
       </footer>
     </main>
   );
