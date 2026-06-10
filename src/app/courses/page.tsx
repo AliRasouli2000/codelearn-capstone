@@ -75,6 +75,10 @@ export default function CoursesPage() {
           ))}
         </div>
       </section>
+
+      <footer className={styles['page-footer']}>
+        <p>© 2025 CodeLearn. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

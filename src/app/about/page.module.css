@@ -5,7 +5,7 @@
   color: #0f172a;
   display: flex;
   flex-direction: column;
-  padding: 60px 20px 70px;
+  padding: 60px 20px 0;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
@@ -166,6 +166,19 @@
   font-weight: 400;
 }
 
+.page-footer {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #e2e8f0;
+  margin-top: 2rem;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
@@ -175,7 +188,7 @@
   }
 
   .about-page {
-    padding: 50px 20px 60px;
+    padding: 50px 20px 0;
   }
 
   .about-hero {
@@ -185,7 +198,7 @@
 
 @media (max-width: 768px) {
   .about-page {
-    padding: 40px 16px 50px;
+    padding: 40px 16px 0;
   }
 
   .about-card {

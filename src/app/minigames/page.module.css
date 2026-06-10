@@ -18,6 +18,15 @@
   background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
+.page-footer {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #e2e8f0;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
 .minigames-container {
   max-width: 1100px;
   margin: 0 auto;
