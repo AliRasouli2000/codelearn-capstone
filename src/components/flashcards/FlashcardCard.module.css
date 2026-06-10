@@ -18,7 +18,7 @@
 .flashcardFace {
   position: absolute;
   inset: 0;
-  padding: 38px 26px 24px;
+  padding: 58px 26px 24px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -71,7 +71,7 @@
   }
 
   .flashcardFace {
-    padding: 32px 20px 18px;
+    padding: 36px 20px 18px;
   }
 }
 
@@ -81,21 +81,28 @@
   }
 
   .flashcardFace {
-    padding: 24px 14px 14px;
+    padding: 30px 14px 14px;
   }
 
   .flashcardFront {
-    font-size: 0.92rem;
+    font-size: 0.88rem;
+    padding-top: 55px;
   }
 
   .flashcardBack {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 1.4;
+    padding: 18px 14px 36px;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
   }
 
   .flashcardFront::after {
-    font-size: 0.65rem;
-    padding: 4px 8px;
+    top: 4px;
+    right: 6px;
+    font-size: 0.58rem;
+    padding: 3px 7px;
   }
 }
 
