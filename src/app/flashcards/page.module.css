@@ -1,0 +1,147 @@
+/* FlashCards Page Styles */
+
+:root {
+  --primary-blue: #3b82f6;
+  --primary-blue-dark: #2563eb;
+  --primary-blue-light: #60a5fa;
+  --secondary-cyan: #06b6d4;
+  --background-light: #f8fafc;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Flashcards Page Background */
+
+.flashcards-section {
+  min-height: 100vh;
+  padding: 50px 20px 70px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+
+
+/* Flashcards Grid Layout */
+
+.flashcards-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+
+/* Flip Card Styling */
+
+/* Outer wrapper: holds perspective */
+.flashcard-card {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+/* Inner rotating wrapper */
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease;
+}
+
+/* Flip 180 degrees */
+.flashcard-card.is-flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+
+/* Flashcard Faces */
+
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  padding: 38px 26px 24px 26px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+
+  backface-visibility: hidden;
+  text-align: left;
+  word-wrap: break-word;
+  transition: all 0.3s ease;
+}
+
+/* ---- Front (Question) ---- */
+.flashcard-front {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* ---- Back (Answer) ---- */
+.flashcard-back {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  transform: rotateY(180deg);
+}
+
+
+/* Hover Effects */
+
+.flashcard-card:hover .flashcard-face {
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+/* Optional: subtle blue badge like your other cards */
+.flashcard-front::after {
+  content: "Flashcard";
+  position: absolute;
+  top: 6px;
+  right: 8px;
+
+  font-size: 0.75rem;
+  padding: 6px 12px;
+
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--primary-blue-dark);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+
+  border-radius: 12px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flashcards-section {
+    padding: 30px 16px 50px;
+  }
+
+  .flashcards-grid {
+    gap: 20px;
+  }
+
+  .flashcard-face {
+    padding: 32px 20px 18px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .flashcards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flashcard-face {
+    padding: 30px 18px 16px 18px;
+  }
+}
