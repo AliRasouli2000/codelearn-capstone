@@ -17,6 +17,7 @@ type AppShellProps = {
 
 export default function AppShell({ children }: AppShellProps) {
   const [userData, setUserData] = useState<UserData>(defaultUserData);
+  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -58,6 +59,10 @@ export default function AppShell({ children }: AppShellProps) {
     };
   }, [pathname]);
 
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
   const router = useRouter();
   const { loggedIn, username } = userData;
 
@@ -77,7 +82,18 @@ export default function AppShell({ children }: AppShellProps) {
         <header className={styles.header}>
           <nav className={styles.navbar}>
             <div className={styles.logo}>CodeLearn</div>
-            <div className={styles.navLinks}>
+            <button
+              type="button"
+              className={styles.menuToggle}
+              aria-expanded={menuOpen}
+              aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+              onClick={() => setMenuOpen((prev) => !prev)}
+            >
+              <span className={styles.menuBar} />
+              <span className={styles.menuBar} />
+              <span className={styles.menuBar} />
+            </button>
+            <div className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ""}`}>
               {!loggedIn && (
                 <Link href="/login" className={styles.navLink}>
                   Login / Sign Up

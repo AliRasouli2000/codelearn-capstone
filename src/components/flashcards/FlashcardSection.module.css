@@ -14,6 +14,13 @@
 
 @media (max-width: 640px) {
   .flashcardsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .flashcardsGrid {
     grid-template-columns: 1fr;
   }
 }

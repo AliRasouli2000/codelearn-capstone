@@ -37,11 +37,32 @@
   letter-spacing: -0.5px;
 }
 
+.menuToggle {
+  display: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.menuBar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px 0;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+
 .navLinks {
   display: flex;
   list-style: none;
   gap: 1.5rem;
   align-items: center;
+}
+
+.navLinksOpen {
+  display: flex;
 }
 
 .welcomeText {
@@ -116,11 +137,40 @@
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem 2rem;
+    padding: 1rem 1.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .menuToggle {
+    display: block;
   }
 
   .navLinks {
-    gap: 1rem;
-    flex-wrap: wrap;
+    display: none;
+    width: 100%;
+    margin-top: 0.85rem;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+    border-radius: 16px;
+    background: rgba(15, 23, 42, 0.96);
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.28);
+  }
+
+  .navLinks.navLinksOpen {
+    display: flex;
+  }
+
+  .navLink,
+  .logoutButton,
+  .welcomeText {
+    font-size: 1.05rem;
+  }
+
+  .welcomeText {
+    padding: 0.25rem 0;
   }
 }

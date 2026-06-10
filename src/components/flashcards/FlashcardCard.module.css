@@ -66,13 +66,41 @@
 }
 
 @media (max-width: 768px) {
+  .flashcardInner {
+    min-height: 250px;
+  }
+
   .flashcardFace {
     padding: 32px 20px 18px;
   }
 }
 
 @media (max-width: 640px) {
+  .flashcardInner {
+    min-height: 210px;
+  }
+
   .flashcardFace {
-    padding: 30px 18px 16px;
+    padding: 24px 14px 14px;
+  }
+
+  .flashcardFront {
+    font-size: 0.92rem;
+  }
+
+  .flashcardBack {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .flashcardFront::after {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .flashcardInner {
+    min-height: 220px;
   }
 }
