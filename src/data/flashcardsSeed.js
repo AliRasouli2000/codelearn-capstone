@@ -18,7 +18,7 @@ export const flashcards = [
     {front: "What does the <script> tag do?", 
     back: "Used to embed or reference executable JavaScript code within an HTML document."},
     {front: "What is the DOM?", 
-    back: "The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content."},
+    back: "The Document Object Model (DOM) represents a web page and allows scripts to modify its content, structure, and style."},
     {front: "What does CSS stand for?", 
     back: "Cascading Style Sheets — used for describing the presentation of a document written in HTML or XML."},
     {front: "What is the CSS Box Model?", 
