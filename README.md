@@ -317,6 +317,7 @@ Flowchart and database model can be found in the docs folder outside of src.
 ---
 # Website
 Live website: https://alirasouli.ca
+Submission note: PR will be opened from dev into main for Springboard review.
 
 ## Cat Fact API
 CodeLearn uses the Cat Fact API to fetch random cat facts that are displayed in the app.
