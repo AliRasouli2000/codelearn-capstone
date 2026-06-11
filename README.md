@@ -312,3 +312,16 @@ Potential stretch goals include:
 # CodeLearn Flowchart and Database Model
 Flowchart and database model can be found in the docs folder outside of src.
 
+
+
+---
+# Website
+Live website: https://alirasouli.ca
+
+## Cat Fact API
+CodeLearn uses the Cat Fact API to fetch random cat facts that are displayed in the app.
+
+- Provider: Cat Fact API
+- Endpoint used: https://catfact.ninja/fact
+- Purpose: provide short random cat facts as a fun educational break for users
+
