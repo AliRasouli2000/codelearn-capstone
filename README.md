@@ -229,3 +229,86 @@ Potential stretch goals include:
 - Progress analytics
 - Search/filter functionality
 - Additional courses
+
+
+
+
+---
+# CodeLearn API Specifications
+
+## Content Routes
+
+**API Endpoint = GET => "/api/courses" => Result**
+- A successful response will show all courses available for the user to browse
+- A response may respond with 500 IF a "general server error happened"
+
+**API Endpoint = GET => "/api/flashcards" => Result**
+- A successful response will show all flashcards available
+- A response may respond with 500 IF a "general server error happened"
+
+**API Endpoint = GET => "/api/codesnippets" => Result**
+- A successful response will show all code snippets available for reference
+- A response may respond with 500 IF a "general server error happened"
+
+**API Endpoint = GET => "/api/games" => Result**
+- A successful response will show all mini-games available
+- A response may respond with 500 IF a "general server error happened"
+
+---
+
+## User Authentication Routes
+
+**API Endpoint = POST => "/api/users/signup" => Result**
+- A successful response will respond with 201 and create a new user account
+- A response may respond with 400 IF required fields are invalid
+- A response may respond with 400 IF email is already registered
+- A response may respond with 500 IF a "general server error happened"
+
+**API Endpoint = POST => "/api/users/login" => Result**
+- A successful response will respond with 200 and set an auth token cookie
+- A response may respond with 400 IF login credentials are invalid
+- A response may respond with 400 IF user email is not verified
+- A response may respond with 500 IF a "general server error happened"
+
+**API Endpoint = GET => "/api/users/logout" => Result**
+- A successful response will respond with 200 and clear the auth token cookie
+
+**API Endpoint = POST => "/api/users/verifyemail" => Result**
+- A successful response will respond with 200 and verify the user email
+- A response may respond with 400 IF the verification token is invalid or expired
+- A response may respond with 500 IF a "general server error happened"
+
+**API Endpoint = POST => "/api/users/forgotpassword" => Result**
+- A successful response will respond with 200 and send a password reset email
+- A response may respond with 404 IF the user email is NOT found
+- A response may respond with 500 IF a "general server error happened"
+
+**API Endpoint = POST => "/api/users/resetpassword" => Result**
+- A successful response will respond with 200 and password is successfully reset
+- A response may respond with 400 IF the reset token is invalid or expired
+- A response may respond with 400 IF password length is invalid
+- A response may respond with 404 IF the user is NOT found
+- A response may respond with 500 IF a "general server error happened"
+
+---
+
+## User Data Routes
+
+**API Endpoint = GET => "/api/users/userinfo" => Result**
+- A successful response will show the current user's information
+- A response may respond with 401 IF the user is NOT logged in
+- A response may respond with 500 IF a "general server error happened"
+
+**API Endpoint = POST => "/api/users/quizscore" => Result**
+- A successful response will respond with 200 and save quiz score for the current user
+- A response may respond with 400 IF a user input error occurred
+- A response may respond with 401 IF a User is NOT Logged In
+- A response may respond with 500 IF a "general server error happened"
+
+
+
+
+---
+# CodeLearn Flowchart and Database Model
+Flowchart and database model can be found in the docs folder outside of src.
+

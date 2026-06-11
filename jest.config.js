@@ -6,7 +6,7 @@ const customJestConfig = {
   clearMocks: true,
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   testEnvironment: "jest-environment-jsdom",
-  testMatch: ["<rootDir>/test/unit/**/*.test.{ts,tsx}"],
+  testMatch: ["<rootDir>/test/**/*.test.{ts,tsx}"],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
